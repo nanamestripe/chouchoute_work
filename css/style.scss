@@ -22,7 +22,7 @@ $mq-breakpoints: ('xs': 320px,
 // START: Gradient difinition
 
 /* mixinの定義 */
-@mixin bg-gradient($angle: 180deg, $color: #0bd, $amount: 20%) {
+@mixin bg-gradient($angle: 180deg, $color: rgba(0, 187, 221, 0.8), $amount: 20%) {
   background: linear-gradient($angle, $color, adjust-hue($color, $amount)) fixed;
 }
 
@@ -152,7 +152,7 @@ __________________________________________*/
   }
 
   &__colored--02 {
-    @include bg-gradient(45deg, #A0ECD0, 30%);
+    @include bg-gradient(45deg, rgba(160, 236, 208, 0.8), 30%);
     width: 100%;
     z-index: 1;
     overflow: hidden;
@@ -246,8 +246,4 @@ __________________________________________*/
   #video_controls {
     display: none;
   }
-}
-
-#main_content {
-  // position: relative;
 }
