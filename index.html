@@ -10,58 +10,64 @@
   <script src="https://use.fontawesome.com/7ca58b1eed.js"></script>
 </head>
 <body>
-  <section class="l-wrapper">
-    <header class="l-header">
-      <a class="c-hamburger">
-        <ul class="c-hamburger__inner">
-          <li class="c-hamburger__bar"></li>
-          <li class="c-hamburger__bar"></li>
-          <li class="c-hamburger__bar"></li>
-        </ul>
-        <div class="c-text">
-          <span class="on">MENU</span>
-          <span class="off">CLOSE</span>
-        </div>
-      </a>
-      <nav class="p-navigation">
-        <ul>
-          <li class="about"><a href="#about">About</a></li>
-          <li class="flow"><a href="#flow">Flow</a></li>
-          <li class="flow">
-            <h1><a href="https://sample.html">シュシュエットサロン</h1></a>
-          </li>
-          <li class="staff"><a href="#staff">Staff</a></li>
-          <li class="contact"><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="c-btn__close">
-          <span>
-            <i class="fa fa-window-close" aria-hidden="true"></i>
-          </span>
-        </div>
-      </nav>
-    </header>
-    <article class="p-video">
-      <video src="video/dog_sample.mp4" loop autoplay muted class="p-video__inner"></video>
-    </article>
-
-    <main class="l-main">
-      <article class="p-content__colored--01">
+  <article id="container">
+    <video id="background_video" loop muted autoplay>
+    </video>
+    <div id="video_cover"></div>
+    <div id="overlay"></div>
+    <section id="main_content">
+      <header class="l-header">
+        <a class="c-hamburger">
+          <ul class="c-hamburger__inner">
+            <li class="c-hamburger__bar"></li>
+            <li class="c-hamburger__bar"></li>
+            <li class="c-hamburger__bar"></li>
+          </ul>
+          <div class="c-text">
+            <span class="on">MENU</span>
+            <span class="off">CLOSE</span>
+          </div>
+        </a>
+        <nav class="p-navigation">
+          <ul>
+            <li class="about"><a href="#about">About</a></li>
+            <li class="flow"><a href="#flow">Flow</a></li>
+            <li class="flow">
+              <h1><a href="https://sample.html">シュシュエットサロン</h1></a>
+            </li>
+            <li class="staff"><a href="#staff">Staff</a></li>
+            <li class="contact"><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="c-btn__close">
+            <span>
+              <i class="fa fa-window-close" aria-hidden="true"></i>
+            </span>
+          </div>
+        </nav>
+      </header>
+      <main class="l-main">
         <div id="logo" class="p-content__logo">
           <img src="images/dog_image-white.svg" alt="">
         </div>
-      </article>
-      <article class="p-content__bgImage">
 
-      </article>
-      <article class="p-content__colored--02">
+        <article class="p-content__colored--01">
 
-      </article>
+        </article>
 
-    </main>
-    <footer class="l-footer">
+        <article class="p-content__bgImage">
 
-    </footer>
-  </section>
+        </article>
+        <article class="p-content__colored--02">
+
+        </article>
+
+      </main>
+      <footer class="l-footer">
+
+      </footer>
+    </section>
+  </article>
+
   <script>
     $(function() {
       //#logoの上からの位置を指定
@@ -72,6 +78,7 @@
         let dy = $(this).scrollTop();
         //代入後、consoleに表示
         console.log(dy);
+        console.log(position1.top);
 
         $('#logo').css('top', position1.top + dy);
       });
@@ -90,5 +97,7 @@
 
     });
   </script>
+  <script src="js/bideo.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

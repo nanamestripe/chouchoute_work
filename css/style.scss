@@ -28,7 +28,8 @@ $mq-breakpoints: ('xs': 320px,
 
 html,
 body {
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 // END: Gradient difinition
@@ -52,14 +53,14 @@ __________________________________________*/
     width: 100%;
     margin: auto;
     background-image: url(../images/header_background-curve.svg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    /* -webkit-transform: translateX(-50%); */
+    /* transform: translateX(-50%); */
     z-index: 100;
-    background-position: top center;
   }
 }
 
@@ -68,6 +69,8 @@ __________________________________________*/
     min-width: 1200px;
     width: 100%;
     margin: auto;
+    position: relative;
+    padding-top: 170%;
   }
 }
 
@@ -85,37 +88,7 @@ __________________________________________*/
 /* ---------------------------------------
 project
 __________________________________________*/
-.p-video {
-  @include mq(xl) {
-    min-width: 1200px;
-    width: 100%;
-    margin: auto;
-    position: relative;
-    padding-top: 56.25%;
-  }
 
-  &__inner {
-    @include mq(xl) {
-      min-width: 1200px;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: auto;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    min-width: 1200px;
-    width: 100%;
-    padding-top: 56.25%;
-    background: rgba(190, 239, 234, 0.5);
-
-
-  }
-}
 
 .p-navigation {
   width: 80%;
@@ -174,6 +147,8 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
+    position: absolute;
+    top: 1050px;
   }
 
   &__colored--02 {
@@ -182,6 +157,8 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
+    position: absolute;
+    top: 3150px;
   }
 
   &__bgImage {
@@ -191,13 +168,15 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
+    position: absolute;
+    top: 2100px;
   }
 
   &__logo {
     position: absolute;
-    top: 50%;
+    top: 12%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -12%);
     width: 200px;
     height: auto;
     z-index: 10;
@@ -209,4 +188,62 @@ __________________________________________*/
     transition: opacity .8s ease;
     opacity: 0;
   }
+}
+
+/* ---------------------------------------
+Utility
+__________________________________________*/
+
+/* ---------------------------------------
+bideo
+__________________________________________*/
+#container {
+  position: relative;
+}
+
+#background_video {
+  max-width: 1920px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+}
+
+#video_cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../images/dog-sunset-l.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#video_controls {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#play img {
+  width: 100px;
+}
+
+#pause img {
+  width: 90px;
+}
+
+#pause {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #video_controls {
+    display: none;
+  }
+}
+
+#main_content {
+  // position: relative;
 }
