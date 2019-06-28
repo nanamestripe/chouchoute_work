@@ -1,7 +1,6 @@
 /* ---------------------------------------
 Foundation
 __________________________________________*/
-@import url(../node_modules/sanitize.css);
 
 html,
 body,
@@ -87,6 +86,52 @@ __________________________________________*/
 }
 
 .l-header {
+  min-width: 576px;
+  width: 100%;
+  margin: auto;
+  background-image: url(../images/header_background-curve.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* -webkit-transform: translateX(-50%); */
+  /* transform: translateX(-50%); */
+  z-index: 100;
+
+  @include mq(md) {
+    min-width: 768px;
+    width: 100%;
+    margin: auto;
+    background-image: url(../images/header_background-curve-md.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* -webkit-transform: translateX(-50%); */
+    /* transform: translateX(-50%); */
+    z-index: 100;
+  }
+
+  @include mq(lg) {
+    min-width: 992px;
+    width: 100%;
+    margin: auto;
+    background-image: url(../images/header_background-curve.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* -webkit-transform: translateX(-50%); */
+    /* transform: translateX(-50%); */
+    z-index: 100;
+  }
+
   @include mq(xl) {
     min-width: 1200px;
     width: 100%;
@@ -94,7 +139,7 @@ __________________________________________*/
     background-image: url(../images/header_background-curve.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom left;
+    background-position: bottom center;
     position: fixed;
     top: 0;
     left: 0;
@@ -105,6 +150,28 @@ __________________________________________*/
 }
 
 .l-main {
+  min-width: 576px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  padding-top: 170%;
+
+  @include mq(md) {
+    min-width: 768px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding-top: 170%;
+  }
+
+  @include mq(lg) {
+    min-width: 992px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding-top: 170%;
+  }
+
   @include mq(xl) {
     min-width: 1200px;
     width: 100%;
@@ -168,7 +235,7 @@ __________________________________________*/
 
       &.logo h1 a {
         display: block;
-        background: url("../images/logo-chouchouet.svg");
+        background: url("../images/logo-chouchoute.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom left;
@@ -187,6 +254,22 @@ __________________________________________*/
 }
 
 .p-content {
+  min-width: 576px;
+  width: 100%;
+  margin: auto;
+
+  @include mq(md) {
+    min-width: 768px;
+    width: 100%;
+    margin: auto;
+  }
+
+  @include mq(lg) {
+    min-width: 992px;
+    width: 100%;
+    margin: auto;
+  }
+
   @include mq(xl) {
     min-width: 1200px;
     width: 100%;
@@ -194,13 +277,36 @@ __________________________________________*/
   }
 
   &__colored--01 {
+
     @include bg-gradient;
     width: 100%;
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
     position: absolute;
-    top: 1050px;
+    top: 432px;
+
+    @include mq(lg) {
+      @include bg-gradient;
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 56.25%;
+      position: absolute;
+      top: 710px;
+    }
+
+    @include mq(xl) {
+
+      @include bg-gradient;
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 56.25%;
+      position: absolute;
+      top: 1050px;
+
+    }
   }
 
   &__colored--02 {
@@ -210,10 +316,32 @@ __________________________________________*/
     overflow: hidden;
     padding-top: 56.25%;
     position: absolute;
-    top: 3150px;
+    top: 1296px;
+
+
+    @include mq(lg) {
+      @include bg-gradient(45deg, rgba(160, 236, 208, 0.8), 30%);
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 56.25%;
+      position: absolute;
+      top: 2130px;
+    }
+
+    @include mq(xl) {
+      @include bg-gradient(45deg, rgba(160, 236, 208, 0.8), 30%);
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 56.25%;
+      position: absolute;
+      top: 3150px;
+    }
   }
 
   &__bgImage {
+
     background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
     background-blend-mode: screen;
     width: 100%;
@@ -221,7 +349,34 @@ __________________________________________*/
     overflow: hidden;
     padding-top: 56.25%;
     position: absolute;
-    top: 2100px;
+    background-size: cover;
+    top: 864px;
+
+    @include mq(lg) {
+      background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
+      background-blend-mode: screen;
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 56.25%;
+      position: absolute;
+      background-size: cover;
+      top: 1420px;
+    }
+
+
+    @include mq(xl) {
+      background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
+      background-blend-mode: screen;
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 56.25%;
+      position: absolute;
+      background-size: cover;
+      top: 2100px;
+
+    }
   }
 
   &__logo {
@@ -271,9 +426,18 @@ __________________________________________*/
   //#background_videoと#video_coverのpositionをfixedに変更
   width: 100%;
   height: 100%;
-  background: url('../images/dog-sunset-l.jpg') no-repeat;
+  background: url('../images/dog-australia-l.jpg') no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(109, 112, 112, 0.5);
 }
 
 #video_controls {
