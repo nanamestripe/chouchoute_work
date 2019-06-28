@@ -2,6 +2,29 @@
 /* ---------------------------------------
 Foundation
 __________________________________________*/
+@import url(../node_modules/sanitize.css);
+html,
+body,
+article,
+section,
+figure,
+figcaption,
+header,
+footer,
+main,
+aside,
+nav,
+menu,
+video,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
 /* mixinの定義 */
 html,
 body {
@@ -12,6 +35,28 @@ body {
 /* ---------------------------------------
 Layout
 __________________________________________*/
+.l-wrapper {
+  min-width: 576px;
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .l-wrapper {
+    min-width: 768px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .l-wrapper {
+    min-width: 992px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .l-wrapper {
     min-width: 1200px;
@@ -28,6 +73,7 @@ __________________________________________*/
     background-image: url(../images/header_background-curve.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom left;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,6 +131,8 @@ __________________________________________*/
   flex-shrink: 1;
   -ms-flex-preferred-size: 0%;
   flex-basis: 0%;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .p-navigation ul li::before {
@@ -101,10 +149,21 @@ __________________________________________*/
   color: #fff;
   text-decoration: none;
   text-align: center;
-  line-height: 60px;
+  line-height: 36px;
   width: 100%;
   display: block;
   font-weight: bold;
+}
+
+.p-navigation ul li.logo h1 a {
+  display: block;
+  background: url("../images/logo-chouchouet.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+  width: 290px;
+  height: 36px;
+  margin: 0 auto;
 }
 
 .p-navigation ul li h1 a {

@@ -1,6 +1,30 @@
 /* ---------------------------------------
 Foundation
 __________________________________________*/
+@import url(../node_modules/sanitize.css);
+
+html,
+body,
+
+article,
+section,
+figure,
+figcaption,
+header,
+footer,
+main,
+aside,
+nav,
+menu,
+video,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
 
 // <======= START: media query
 
@@ -37,12 +61,27 @@ body {
 Layout
 __________________________________________*/
 .l-wrapper {
+  min-width: 576px;
+  width: 100%;
+  margin: auto;
+
+  @include mq(md) {
+    min-width: 768px;
+    width: 100%;
+    margin: auto;
+  }
+
+  @include mq(lg) {
+    min-width: 992px;
+    width: 100%;
+    margin: auto;
+  }
+
   @include mq(xl) {
     min-width: 1200px;
     width: 100%;
     margin: auto;
     // overflow: hidden;
-
   }
 
 }
@@ -55,6 +94,7 @@ __________________________________________*/
     background-image: url(../images/header_background-curve.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom left;
     position: fixed;
     top: 0;
     left: 0;
@@ -104,6 +144,7 @@ __________________________________________*/
       flex-grow: 1.2;
       flex-shrink: 1;
       flex-basis: 0%;
+      align-self: center;
 
       &::before {
         content: "";
@@ -119,10 +160,21 @@ __________________________________________*/
         color: #fff;
         text-decoration: none;
         text-align: center;
-        line-height: 60px;
+        line-height: 36px;
         width: 100%;
         display: block;
         font-weight: bold;
+      }
+
+      &.logo h1 a {
+        display: block;
+        background: url("../images/logo-chouchouet.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom left;
+        width: 290px;
+        height: 36px;
+        margin: 0 auto;
       }
 
       & h1 a {
