@@ -186,7 +186,7 @@ __________________________________________*/
 #background_video {
   max-width: 1920px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -195,7 +195,7 @@ __________________________________________*/
 }
 
 #video_cover {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background: url("../images/dog-sunset-l.jpg") no-repeat;
