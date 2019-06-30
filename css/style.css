@@ -35,7 +35,6 @@ body {
 Layout
 __________________________________________*/
 .l-wrapper {
-  min-width: 576px;
   width: 100%;
   margin: auto;
 }
@@ -65,25 +64,27 @@ __________________________________________*/
 }
 
 .l-header {
-  min-width: 576px;
   width: 100%;
-  margin: auto;
-  background-image: url(../images/header_background-curve.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* -webkit-transform: translateX(-50%); */
-  /* transform: translateX(-50%); */
+  height: 72px;
+  /* background-image: url(../images/); */
+  background-image: url(../images/header_background-curve-sm.svg);
   z-index: 100;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center bottom;
+}
+
+.l-header.open {
+  height: 100%;
+  background-position: center top;
 }
 
 @media screen and (min-width: 768px) {
   .l-header {
     min-width: 768px;
     width: 100%;
+    height: 90px;
     margin: auto;
     background-image: url(../images/header_background-curve-md.svg);
     background-size: cover;
@@ -92,9 +93,9 @@ __________________________________________*/
     position: fixed;
     top: 0;
     left: 0;
-    /* -webkit-transform: translateX(-50%); */
     /* transform: translateX(-50%); */
     z-index: 100;
+    padding-top: 0px;
   }
 }
 
@@ -135,11 +136,9 @@ __________________________________________*/
 }
 
 .l-main {
-  min-width: 576px;
   width: 100%;
   margin: auto;
-  position: relative;
-  padding-top: 170%;
+  padding-top: 177.866%;
 }
 
 @media screen and (min-width: 768px) {
@@ -148,7 +147,7 @@ __________________________________________*/
     width: 100%;
     margin: auto;
     position: relative;
-    padding-top: 170%;
+    padding-top: 56.25%;
   }
 }
 
@@ -158,7 +157,7 @@ __________________________________________*/
     width: 100%;
     margin: auto;
     position: relative;
-    padding-top: 170%;
+    padding-top: 56.25%;
   }
 }
 
@@ -168,7 +167,7 @@ __________________________________________*/
     width: 100%;
     margin: auto;
     position: relative;
-    padding-top: 170%;
+    padding-top: 56.25%;
   }
 }
 
@@ -176,7 +175,21 @@ __________________________________________*/
 Component
 __________________________________________*/
 .c-hamburger {
-  display: none;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  padding: 8px;
+  cursor: pointer;
+  background: chocolate;
+}
+
+@media screen and (min-width: 768px) {
+  .c-hamburger {
+    display: none;
+  }
 }
 
 .c-btn__close {
@@ -187,17 +200,30 @@ __________________________________________*/
 project
 __________________________________________*/
 .p-navigation {
-  width: 80%;
-  margin: 0 auto;
+  display: block;
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .p-navigation {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .p-navigation ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .p-navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .p-navigation ul li {
@@ -234,15 +260,62 @@ __________________________________________*/
   font-weight: bold;
 }
 
+.p-navigation ul li:not(.logo) {
+  opacity: 0;
+  -webkit-transition: all ease-in-out 0.3s 0.3s;
+  transition: all ease-in-out 0.3s 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .p-navigation ul li:not(.logo) {
+    opacity: 1;
+    -webkit-transition: ease;
+    transition: ease;
+  }
+}
+
+.p-navigation ul li.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 64%;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .p-navigation ul li.logo {
+    position: static;
+    top: auto;
+    left: auto;
+    margin: auto;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 .p-navigation ul li.logo h1 a {
   display: block;
-  background: url("../images/logo-chouchoute.svg");
+  background: url(../images/logo-chouchoute.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom left;
-  width: 290px;
-  height: 36px;
+  background-position: center top;
+  /* width: 290px; */
+  height: 40px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .p-navigation ul li.logo h1 a {
+    display: block;
+    background: url("../images/logo-chouchoute.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+    height: 40px;
+    margin: 0 auto;
+  }
 }
 
 .p-navigation ul li h1 a {
@@ -252,7 +325,6 @@ __________________________________________*/
 }
 
 .p-content {
-  min-width: 576px;
   width: 100%;
   margin: auto;
 }
@@ -282,41 +354,38 @@ __________________________________________*/
 }
 
 .p-content__colored--01 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 187, 221, 0.8)), to(rgba(0, 113, 221, 0.8))) fixed;
-  background: -webkit-linear-gradient(top, rgba(0, 187, 221, 0.8), rgba(0, 113, 221, 0.8)) fixed;
-  background: linear-gradient(180deg, rgba(0, 187, 221, 0.8), rgba(0, 113, 221, 0.8)) fixed;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 229, 214, 0.8)), to(rgba(214, 229, 216, 0.8))) fixed;
+  background: -webkit-linear-gradient(top, rgba(217, 229, 214, 0.8), rgba(214, 229, 216, 0.8)) fixed;
+  background: linear-gradient(180deg, rgba(217, 229, 214, 0.8), rgba(214, 229, 216, 0.8)) fixed;
   width: 100%;
   z-index: 1;
   overflow: hidden;
   padding-top: 56.25%;
-  position: absolute;
   top: 432px;
 }
 
 @media screen and (min-width: 992px) {
   .p-content__colored--01 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 187, 221, 0.8)), to(rgba(0, 113, 221, 0.8))) fixed;
-    background: -webkit-linear-gradient(top, rgba(0, 187, 221, 0.8), rgba(0, 113, 221, 0.8)) fixed;
-    background: linear-gradient(180deg, rgba(0, 187, 221, 0.8), rgba(0, 113, 221, 0.8)) fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 229, 214, 0.8)), to(rgba(214, 229, 216, 0.8))) fixed;
+    background: -webkit-linear-gradient(top, rgba(217, 229, 214, 0.8), rgba(214, 229, 216, 0.8)) fixed;
+    background: linear-gradient(180deg, rgba(217, 229, 214, 0.8), rgba(214, 229, 216, 0.8)) fixed;
     width: 100%;
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
     top: 710px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .p-content__colored--01 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 187, 221, 0.8)), to(rgba(0, 113, 221, 0.8))) fixed;
-    background: -webkit-linear-gradient(top, rgba(0, 187, 221, 0.8), rgba(0, 113, 221, 0.8)) fixed;
-    background: linear-gradient(180deg, rgba(0, 187, 221, 0.8), rgba(0, 113, 221, 0.8)) fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 229, 214, 0.8)), to(rgba(214, 229, 216, 0.8))) fixed;
+    background: -webkit-linear-gradient(top, rgba(217, 229, 214, 0.8), rgba(214, 229, 216, 0.8)) fixed;
+    background: linear-gradient(180deg, rgba(217, 229, 214, 0.8), rgba(214, 229, 216, 0.8)) fixed;
     width: 100%;
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
     top: 1050px;
   }
 }
@@ -328,7 +397,6 @@ __________________________________________*/
   z-index: 1;
   overflow: hidden;
   padding-top: 56.25%;
-  position: absolute;
   top: 1296px;
 }
 
@@ -340,7 +408,6 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
     top: 2130px;
   }
 }
@@ -353,7 +420,6 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
     top: 3150px;
   }
 }
@@ -365,7 +431,6 @@ __________________________________________*/
   z-index: 1;
   overflow: hidden;
   padding-top: 56.25%;
-  position: absolute;
   background-size: cover;
   top: 864px;
 }
@@ -378,7 +443,6 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
     background-size: cover;
     top: 1420px;
   }
@@ -392,7 +456,6 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
     background-size: cover;
     top: 2100px;
   }
@@ -400,10 +463,10 @@ __________________________________________*/
 
 .p-content__logo {
   position: absolute;
-  top: 12%;
+  top: 6%;
   left: 50%;
-  -webkit-transform: translate(-50%, -12%);
-  transform: translate(-50%, -12%);
+  -webkit-transform: translate(-50%, -6%);
+  transform: translate(-50%, -6%);
   width: 200px;
   height: auto;
   z-index: 10;
@@ -429,18 +492,20 @@ __________________________________________*/
 #background_video {
   max-width: 1920px;
   width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   -o-object-fit: cover;
   object-fit: cover;
+  z-index: -100;
 }
 
 #video_cover {
   position: fixed;
   width: 100%;
-  height: 100%;
   background: url("../images/dog-australia-l.jpg") no-repeat;
   background-position: center;
   background-size: cover;

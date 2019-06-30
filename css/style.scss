@@ -45,7 +45,7 @@ $mq-breakpoints: ('xs': 320px,
 // START: Gradient difinition
 
 /* mixinの定義 */
-@mixin bg-gradient($angle: 180deg, $color: rgba(0, 187, 221, 0.8), $amount: 20%) {
+@mixin bg-gradient($angle: 180deg, $color: rgba(217, 229, 214, 0.8), $amount: 20%) {
   background: linear-gradient($angle, $color, adjust-hue($color, $amount)) fixed;
 }
 
@@ -60,7 +60,6 @@ body {
 Layout
 __________________________________________*/
 .l-wrapper {
-  min-width: 576px;
   width: 100%;
   margin: auto;
 
@@ -86,23 +85,26 @@ __________________________________________*/
 }
 
 .l-header {
-  min-width: 576px;
   width: 100%;
-  margin: auto;
-  background-image: url(../images/header_background-curve.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* -webkit-transform: translateX(-50%); */
-  /* transform: translateX(-50%); */
+  height: 72px;
+  /* background-image: url(../images/); */
+  background-image: url(../images/header_background-curve-sm.svg);
   z-index: 100;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center bottom;
+
+  &.open {
+    height: 100%;
+    background-position: center top;
+  }
+
 
   @include mq(md) {
     min-width: 768px;
     width: 100%;
+    height: 90px;
     margin: auto;
     background-image: url(../images/header_background-curve-md.svg);
     background-size: cover;
@@ -111,9 +113,11 @@ __________________________________________*/
     position: fixed;
     top: 0;
     left: 0;
-    /* -webkit-transform: translateX(-50%); */
     /* transform: translateX(-50%); */
     z-index: 100;
+
+    // tablet以上 padding-topを削除
+    padding-top: 0px;
   }
 
   @include mq(lg) {
@@ -150,18 +154,17 @@ __________________________________________*/
 }
 
 .l-main {
-  min-width: 576px;
   width: 100%;
   margin: auto;
-  position: relative;
-  padding-top: 170%;
+  // position: relative;
+  padding-top: 177.866%;
 
   @include mq(md) {
     min-width: 768px;
     width: 100%;
     margin: auto;
     position: relative;
-    padding-top: 170%;
+    padding-top: 56.25%;
   }
 
   @include mq(lg) {
@@ -169,7 +172,7 @@ __________________________________________*/
     width: 100%;
     margin: auto;
     position: relative;
-    padding-top: 170%;
+    padding-top: 56.25%;
   }
 
   @include mq(xl) {
@@ -177,7 +180,7 @@ __________________________________________*/
     width: 100%;
     margin: auto;
     position: relative;
-    padding-top: 170%;
+    padding-top: 56.25%;
   }
 }
 
@@ -185,7 +188,19 @@ __________________________________________*/
 Component
 __________________________________________*/
 .c-hamburger {
-  display: none;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  padding: 8px;
+  cursor: pointer;
+  background: chocolate;
+
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .c-btn__close {
@@ -198,12 +213,21 @@ __________________________________________*/
 
 
 .p-navigation {
-  width: 80%;
-  margin: 0 auto;
+  display: block;
+  margin-top: 80px;
+
+  @include mq(md) {
+    width: 80%;
+    margin: 0 auto;
+  }
 
   & ul {
-    display: flex;
-    justify-content: center;
+    display: block;
+
+    @include mq(md) {
+      display: flex;
+      justify-content: center;
+    }
 
     & li {
       position: relative;
@@ -233,15 +257,54 @@ __________________________________________*/
         font-weight: bold;
       }
 
+      //モバイルタイミングのみ縦積みのメニューに変化
+      &:not(.logo) {
+        opacity: 0;
+        transition: all ease-in-out 0.3s 0.3s;
+
+        @include mq(md) {
+          opacity: 1;
+          transition: ease;
+        }
+      }
+
+      &.logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 64%;
+        margin: auto;
+
+        @include mq(md) {
+          position: static;
+          top: auto;
+          left: auto;
+          margin: auto;
+          transform: none;
+
+        }
+      }
+
       &.logo h1 a {
         display: block;
-        background: url("../images/logo-chouchoute.svg");
+        background: url(../images/logo-chouchoute.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: bottom left;
-        width: 290px;
-        height: 36px;
+        background-position: center top;
+        /* width: 290px; */
+        height: 40px;
         margin: 0 auto;
+
+        @include mq(md) {
+          display: block;
+          background: url("../images/logo-chouchoute.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: bottom left;
+          height: 40px;
+          margin: 0 auto;
+        }
       }
 
       & h1 a {
@@ -254,7 +317,6 @@ __________________________________________*/
 }
 
 .p-content {
-  min-width: 576px;
   width: 100%;
   margin: auto;
 
@@ -283,7 +345,7 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
+    // position: absolute;
     top: 432px;
 
     @include mq(lg) {
@@ -292,7 +354,7 @@ __________________________________________*/
       z-index: 1;
       overflow: hidden;
       padding-top: 56.25%;
-      position: absolute;
+      // position: absolute;
       top: 710px;
     }
 
@@ -303,10 +365,11 @@ __________________________________________*/
       z-index: 1;
       overflow: hidden;
       padding-top: 56.25%;
-      position: absolute;
+      // position: absolute;
       top: 1050px;
 
     }
+
   }
 
   &__colored--02 {
@@ -315,7 +378,7 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
+    // position: absolute;
     top: 1296px;
 
 
@@ -325,7 +388,7 @@ __________________________________________*/
       z-index: 1;
       overflow: hidden;
       padding-top: 56.25%;
-      position: absolute;
+      // position: absolute;
       top: 2130px;
     }
 
@@ -335,7 +398,7 @@ __________________________________________*/
       z-index: 1;
       overflow: hidden;
       padding-top: 56.25%;
-      position: absolute;
+      // position: absolute;
       top: 3150px;
     }
   }
@@ -348,7 +411,7 @@ __________________________________________*/
     z-index: 1;
     overflow: hidden;
     padding-top: 56.25%;
-    position: absolute;
+    // position: absolute;
     background-size: cover;
     top: 864px;
 
@@ -359,7 +422,7 @@ __________________________________________*/
       z-index: 1;
       overflow: hidden;
       padding-top: 56.25%;
-      position: absolute;
+      // position: absolute;
       background-size: cover;
       top: 1420px;
     }
@@ -372,7 +435,7 @@ __________________________________________*/
       z-index: 1;
       overflow: hidden;
       padding-top: 56.25%;
-      position: absolute;
+      // position: absolute;
       background-size: cover;
       top: 2100px;
 
@@ -381,9 +444,9 @@ __________________________________________*/
 
   &__logo {
     position: absolute;
-    top: 12%;
+    top: 6%;
     left: 50%;
-    transform: translate(-50%, -12%);
+    transform: translate(-50%, -6%);
     width: 200px;
     height: auto;
     z-index: 10;
@@ -411,13 +474,14 @@ __________________________________________*/
 #background_video {
   max-width: 1920px;
   width: 100%;
+  height: 100%;
   position: fixed;
-  // position: absolute;
-  //#background_videoと#video_coverのpositionをfixedに変更
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   object-fit: cover;
+  z-index: -100;
 }
 
 #video_cover {
@@ -425,7 +489,7 @@ __________________________________________*/
   // position: absolute;
   //#background_videoと#video_coverのpositionをfixedに変更
   width: 100%;
-  height: 100%;
+
   background: url('../images/dog-australia-l.jpg') no-repeat;
   background-position: center;
   background-size: cover;

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="290px"
-	 height="36px" viewBox="0 0 290 36" enable-background="new 0 0 290 36" xml:space="preserve">
-<g id="レイヤー_4" display="none">
-	<rect display="inline" fill="#5E1313" width="290" height="36"/>
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="220px" height="36px" viewBox="0 0 220 36" enable-background="new 0 0 220 36" xml:space="preserve">
+<g id="レイヤー_4">
+	<rect y="0" display="none" fill="#5E1313" width="220" height="36"/>
 </g>
-<g id="レイヤー_1">
-</g>
-<g id="レイヤー_2" display="none">
+<g display="none">
 	<path display="inline" fill="#FFFFFF" d="M75.108,43.098c-13.028,0-26.056,0-39.084,0c-3.257,0-6.514,0-9.771,0
 		c-0.194,0-1.132,0.112-1.244,0c-0.107-0.107,0-0.897,0-1.066c0-0.829,0-1.658,0-2.487c0-1.658,0-3.316,0-4.974
 		c0-6.514,0-13.028,0-19.542c0-7.343,0-14.686,0-22.029c13.028,0,26.056,0,39.084,0c3.671,0,7.343,0,11.014,0
@@ -76,28 +74,30 @@
 <g id="psd" display="none">
 	<g id="cafe_x5F_ps_1_" display="inline">
 		
-			<image overflow="visible" width="34" height="38" id="_x30_d967386-1694-44a7-84a4-1fcd588fe2b8_1_" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAmCAYAAACh1knUAAAACXBIWXMAAAjEAAAIxAHydkeTAAAA
-GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABFtJREFUeNrEl09sFVUUxt/Q11co
-hYKttYCCRUHBiIARVNQaYkJiJBpBA/6LcaEbt+504U6jK+PGjSuJUUMCJmKMUmOIRptYQIzGImgL
-RQqUKlLKtH1v/H3J95JxfNNXHsW5yS/z/ty5c+6553znTC5X44iiqAHaIZ+bhjHjMu6dB/fCLRhT
-l6UhZ6AXtsLyzAwJgqDI5Zh5Aa/MysojGufgONwPqzMzBK9McPkbWmBTZoZwHAGXAlwNq/w9k6Np
-gFZfr5KTsjJkDtwEJQizDNa50hE4D0eImdL/bojjYT7cZk35OiuPSNoXwWI4Cl1ZGaJjWWkt6eJY
-/shd5q6mehS61MNskIp2WMSG4Wf+X8J1zChwR62+U9OkKg+Xx5qgzaLVZgOugeugU9PgE/hTD4eL
-cBYGYMiGnpbnMOzSPGID5PplcLur7I3QDhfgFIz4oao1R2Cm/19oQxs9R/99K1i3H2OGp+QR9xcK
-wAfhCe9cO+t2tf0F+p0x2+E3Fn8tkU3axApYBxvgZntsJ3wMfdwTTZqS0AFvwRB8D+/D6/A0XBub
-2wrPw8tVjrcJNsMeGIB3HE9Vb3oWzsEB39QND1TyHNwBr1SrMTpqWA1dcApeTd6TTN9Wl/Rxu1/H
-ogp7MKXyqgU44GyarEqXvN5nfoaO/U6MWQNLoTEZrI2Oj4I/S6gWwDYm63wHEyk5CHttyFgVFW6G
-JY7LW+E9Z5Ribme+QvCWU1bF7Ccbs9UB+BWLDnoB9SEhhl1I0ZwgVqG1uYfgsdhzQm9EJ7AuaUjo
-uqGhwHzK0v0drIV7YD/0KFukFzy06Oqbs6aULAsFi58k4FF42N81pMJvwB54EV5KGjJiD5SHUnSL
-d9/jWImsLfdBnUUs9OeyF5r80A7PnR1bs2Tt6fKmv9HRJg35Cw5B0QvH+45Ok3MwD7v8j3rxWTag
-2Z/Thja1nyPtw5tzbexI0hAtehhOOGPSRr3lvq2G+nZS2YMR9Ra6zfptRiLNIk/8MndlRsl1p9eq
-+xzcpeOp1AZo4heuKdM9is6ix+FNeBL2wdtpeb8S9kZXbozDMdghdZ6sH1FU73DEN0+TN8ZcPNVI
-9bl1+IBwGPyPIS7/jX41OGn92HgpDVTKCK07B93bfupmO/pXP+LS3+JUUvt3N1zv9PzdvUitY8Ie
-lpSvsg4p/VvUn6i3UdlQ2W/ww7fE3uzLwjTgHXS62aklOOXZX73JxTHj+t2ffAg/yBvLYXdKUE3A
-UdgFJyTnNQSk6lNPypwQPldy5F2WN6TsqM7CVrRn1lg150+inmPuxoZcU+b5vkqjYC+tyFtFP4JH
-7P6gQl+71D3pPt98gwO6GJsfmIuuV5Ly9bHjqHRs5VrTHbhXUMP7jEv1Qu9iTqLelKurasyPDsAw
-NqfO0t/u19DWFGU97zWOWzjfJVj7g0TTvMiBudZ1oCX2HjPT3ijYS/lYxY28w8iBOB57vwntpVEb
-cNiVXN7tLafwPwIMACoctD/9nVwkAAAAAElFTkSuQmCC" transform="matrix(1.2632 0 0 1.2632 25 -6)">
+			<image overflow="visible" enable-background="new    " width="34" height="38" id="_x30_d967386-1694-44a7-84a4-1fcd588fe2b8_1_" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAoCAYAAACb3CikAAAACXBIWXMAAAjEAAAIxAHydkeTAAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABLRJREFUeNrMmMlvW1UYxXNfrp05
+ENqS0ZRS1EKhQMVUBgmxKRQhhgVSN5XYIBbd8p+wY8EONkgs2CAQYhYSQgpTa6gYWjK4lLSuadLW
+sWOb86Hfla6enkNrVzFPOnLyhvvOPd/5Bruv739yuE4fbLVa9tEvJMKGc67VDZGki2eNxA3CnDAs
+Yq5XROzZceFO4S5hsFdENoRzwqpwUNgnVZItJ4InqkIJrz2DQluuiB0N4W+hLjwo3NErIi1CZJ87
+hQNk05YTsZB4YUSYFAqdloRuidjzY8J2IS8M9YpIPyRMiZpwmTBtHRG8YGG5WbhFWBFOd1phky79
+YeGYFmaEU8KPvcgahz/mUMZIFDtdzHcQjgRvDKBEgaL2nbCue0ylJmhdbaj8Vbw4pGiOUFiq3ihM
+WN0QdgtrELzPyIBLdl5r1Ch41qEb1zQGRATyyD+FISfBNsr5HNX0jPAVJb8PNSyDyuCssEhvWs8i
+5DaZM8bZre36buE2YZSd2+LnqRsWmuPCZ/x/Eym9nTHB3lERfsVHPxHKmghlE4lI7BAeFQ4jt4Vm
+QfhWOEGGrEH0cSOiRd9KrWHh22VdWbhX2ItSptwHto6eqbXziGPXDwuv8qLT7OBriBS1QEUv9BQx
+C1ViBGyH7LKBYud1fl6f70P4JeEIoX5D14pBFZ9RKS0TnhTuQcYy5z/RQ8VU57WY/0ZRS9hxelxo
+6oVW7D7EQ68JT6Pwkq7ZOhtpIpYZs0xdwfkjvLCqh3JhPjXouEKYKpBtbpKEdUy9gOJPoZqFuOQz
+CtwIWTFMrfgL4z0rfCQsi8A67d92s8w9WX4L4Q7z7W58M8RUV2CTiz5jvggrmNluZbfrmHeccC2R
+khXktmdMooGU3xJKgIXufuFF4QHutxHzZ+GCDVVpIk2kKhOmkLLHkTFMYSeF3zl3KVLHBVLRWDCJ
+354ge/LUGEvl11HzmM8Y/crI3ULSaRYz5r+gzl4I9fNMFTI5zoUKPErR28m5oPoaavzA+VIWkRUy
+oYZHgne2gYMsVmPBKn877h8GuU2m/zOQWKPOFLJCcxHZlwlNu9YwEBG9lqPG+ifI0McsdEkq5+Mb
+5/8jHTsdtoOS1sNeEJ63cCZt8t1y/Ruy4nofFoU9wivCy/Smd5OsSogx5ynpjetIook57SvqI3Tk
+N4W3fZv236THfC7spwm6LknUUbgEge+Fj015bX7VpyavPCm3g5RrkEFj1IRuvieXaQeGLxkb/mCq
+cx4SOVJzD7PHPmrFOOm5SAb5Dkg0yMQSSh+gxkxRKIv/Tv+0c0ujQ8JzwkNRKOqQWKBPTG1SH9qR
+WIVElT4zQfZUCb/1r/c8tcBYHqMEpx0+E3mmQZX10a9F7UxZJ03/pKRPQyL4cIjqbOuNeRYbpTvW
+UzsOhWuWxU8hc+jQg21qxWW66kXWmKbUZ91r14cd47954igDSwHTBpIuqoglzOsxsI+anYs67gZq
+2CZuj5SIf0Go85OG+eQdh1nztPxD9JJdSDbBtfBdJqR2Bd9UIJJEPWmA+WWWntOMYPdeQa0ljPqp
+8IWLakgchv3sZIawDXItB4JHYp+0wpcqXhh2XUfNGga9wCZOQmTFpr1/BBgATYGjYxVlj7kAAAAA
+SUVORK5CYII=" transform="matrix(1.2632 0 0 1.2632 25 -6)">
 		</image>
 	</g>
 </g>
@@ -105,45 +105,47 @@ cNiVXN7tLafwPwIMACoctD/9nVwkAAAAAElFTkSuQmCC" transform="matrix(1.2632 0 0 1.263
 	<g>
 		<g id="アートボード_1_1_">
 			
-				<image overflow="visible" enable-background="new    " width="48" height="46" id="cafe_ps_1_" xlink:href="data:image/png;base64,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
-SnFt5OmpWQAAAABJRU5ErkJggg==" transform="matrix(0.7391 0 0 0.7391 35 1)">
+				<image overflow="visible" enable-background="new    " width="49" height="46" id="cafe_ps_1_" xlink:href="data:image/png;base64,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
+k2YAAAAASUVORK5CYII=" transform="matrix(0.724 0 0 0.724 10 1.3469)">
 			</image>
 		</g>
 	</g>
 </g>
 <g id="レイヤー_3">
-	<rect x="87" y="10.75" fill="none" width="168.1" height="16.501"/>
-	<text transform="matrix(1 0 0 1 87 26.2926)" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">Cafe chouchoute</text>
+	<rect x="50.9" y="10.75" fill="none" width="168.1" height="16.501"/>
+	<rect x="50.9" y="10.75" fill="none" width="159.1" height="21.001"/>
+	<text transform="matrix(1 0 0 1 50.9 26.2926)" enable-background="new    "><tspan x="0" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">C</tspan><tspan x="13.385" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">af</tspan><tspan x="32.292" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">e</tspan><tspan x="44.245" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px" letter-spacing="-4"> </tspan><tspan x="46.077" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">c</tspan><tspan x="57.028" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px" letter-spacing="-1">h</tspan><tspan x="68.771" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">o</tspan><tspan x="80.408" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">u</tspan><tspan x="92.872" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">c</tspan><tspan x="103.462" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">h</tspan><tspan x="115.565" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px" letter-spacing="-1">o</tspan><tspan x="126.483" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">u</tspan><tspan x="138.946" y="0" fill="#FFFFFF" font-family="'Verdana-Bold'" font-size="18px">te</tspan></text>
 </g>
 </svg>
