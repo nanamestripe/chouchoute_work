@@ -588,8 +588,8 @@ __________________________________________*/
 }
 
 .p-content__colored--02 {
-  background: -webkit-linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
-  background: linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
+  background: -webkit-linear-gradient(45deg, rgba(169, 196, 162, 0.8), rgba(162, 196, 172, 0.8)) fixed;
+  background: linear-gradient(45deg, rgba(169, 196, 162, 0.8), rgba(162, 196, 172, 0.8)) fixed;
   width: 100%;
   z-index: 1;
   overflow: hidden;
@@ -599,8 +599,8 @@ __________________________________________*/
 
 @media screen and (min-width: 768px) {
   .p-content__colored--02 {
-    background: -webkit-linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
-    background: linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
+    background: -webkit-linear-gradient(45deg, rgba(169, 196, 162, 0.8), rgba(162, 196, 172, 0.8)) fixed;
+    background: linear-gradient(45deg, rgba(169, 196, 162, 0.8), rgba(162, 196, 172, 0.8)) fixed;
     width: 100%;
     z-index: 1;
     overflow: hidden;
@@ -611,8 +611,8 @@ __________________________________________*/
 
 @media screen and (min-width: 992px) {
   .p-content__colored--02 {
-    background: -webkit-linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
-    background: linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
+    background: -webkit-linear-gradient(45deg, rgba(169, 196, 162, 0.8), rgba(162, 196, 172, 0.8)) fixed;
+    background: linear-gradient(45deg, rgba(169, 196, 162, 0.8), rgba(162, 196, 172, 0.8)) fixed;
     width: 100%;
     z-index: 1;
     overflow: hidden;
@@ -623,8 +623,8 @@ __________________________________________*/
 
 @media screen and (min-width: 1200px) {
   .p-content__colored--02 {
-    background: -webkit-linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
-    background: linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
+    background: -webkit-linear-gradient(45deg, rgba(169, 196, 162, 0.8), rgba(162, 196, 172, 0.8)) fixed;
+    background: linear-gradient(45deg, rgba(169, 196, 162, 0.8), rgba(162, 196, 172, 0.8)) fixed;
     width: 100%;
     z-index: 1;
     overflow: hidden;
@@ -634,7 +634,7 @@ __________________________________________*/
 }
 
 .p-content__bgImage {
-  background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
+  background: #68925d url(../images/dog-coast-l.jpg) no-repeat;
   background-blend-mode: screen;
   width: 100%;
   z-index: 1;
@@ -648,7 +648,7 @@ __________________________________________*/
 
 @media screen and (min-width: 768px) {
   .p-content__bgImage {
-    background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
+    background: #68925d url(../images/dog-coast-l.jpg) no-repeat;
     background-blend-mode: screen;
     width: 100%;
     z-index: 1;
@@ -661,7 +661,7 @@ __________________________________________*/
 
 @media screen and (min-width: 992px) {
   .p-content__bgImage {
-    background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
+    background: #68925d url(../images/dog-coast-l.jpg) no-repeat;
     background-blend-mode: screen;
     width: 100%;
     z-index: 1;
@@ -674,7 +674,7 @@ __________________________________________*/
 
 @media screen and (min-width: 1200px) {
   .p-content__bgImage {
-    background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
+    background: #68925d url(../images/dog-coast-l.jpg) no-repeat;
     background-blend-mode: screen;
     width: 100%;
     z-index: 1;
@@ -744,7 +744,7 @@ __________________________________________*/
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(109, 112, 112, 0.5);
+  background: rgba(121, 163, 110, 0.5);
 }
 
 #video_controls {
