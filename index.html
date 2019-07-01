@@ -37,10 +37,10 @@
             <li class="about"><a href="#about">About</a></li>
             <li class="flow"><a href="#flow">Flow</a></li>
             <li class="logo">
-              <h1><a href="https://chouchoute.work/index.html">シュシュエットサロン</h1></a>
+              <h1><a href="index.html">シュシュエットサロン</h1></a>
             </li>
             <li class="staff"><a href="#staff">Staff</a></li>
-            <li class="contact"><a href="#contact">Contact</a></li>
+            <li class="contact"><a href="index.html">Contact</a></li>
           </ul>
           <div class="c-btn__close">
             <span>
@@ -53,14 +53,14 @@
         <div id="canvas-container">
           <canvas id="sineCanvas" width="800" height="300"></canvas>
         </div>
-        <article class="p-content__colored--01">
+        <article id="about" class="p-content__colored--01">
 
         </article>
 
-        <article class="p-content__bgImage">
+        <article id="flow" class="p-content__bgImage">
 
         </article>
-        <article class="p-content__colored--02">
+        <article id="staff" class="p-content__colored--02">
 
         </article>
 
@@ -197,12 +197,25 @@
   </script>
   <script src="js/bideo.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/smooth.js"></script>
   <script>
-    $(function() {
-      $('.c-hamburger').on('click', function() {
-        $(this).toggleClass('.open');
-      })
-    });
+    if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
+      $(function() {
+        $('.c-hamburger').on('click', function() {
+          $(this).toggleClass('closeBtn');
+          $('.l-header').toggleClass('open');
+          $('.p-navigation').toggleClass('open');
+          $('.c-hamburger').toggleClass('open');
+        })
+      });
+      $(function() {
+        $(document).on("click", '.p-navigation.open>ul>li:not(.logo)', function() {
+          $('.l-header').removeClass('open');
+          $('.p-navigation').removeClass('open');
+
+        })
+      });
+    }
   </script>
 </body>
 </html>

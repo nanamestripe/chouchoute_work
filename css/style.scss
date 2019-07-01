@@ -94,9 +94,17 @@ __________________________________________*/
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center bottom;
+  transition: all ease-in-out 0.5s, 0.5s;
 
   &.open {
+    width: 100%;
     height: 100%;
+    /* background-image: url(../images/); */
+    background-image: url(../images/header_background-curve-sm.svg);
+    z-index: 100;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-position: center top;
   }
 
@@ -190,18 +198,190 @@ __________________________________________*/
 .c-hamburger {
   position: absolute;
   z-index: 500;
-  top: 0;
-  right: 0;
+  top: 14px;
+  right: 8px;
   width: 56px;
   height: 56px;
   padding: 8px;
   cursor: pointer;
-  background: chocolate;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    transition: all ease-in-out 0.5s 0.5s;
+
+    &:first-child {
+      left: 0;
+      top: 0px;
+    }
+
+    &:nth-child(2) {
+      left: 0;
+      top: 10px;
+    }
+
+    &:nth-child(3) {
+      left: 0;
+      top: 20px;
+    }
+  }
+
+  &>div.c-text {
+    margin: 0;
+    text-align: center;
+    position: relative;
+    color: #fff5e4;
+    font-size: 0.7rem;
+    margin-top: 32px;
+
+    & span.on {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      font-size: 10px;
+      transition: all ease-in-out 0.5s, 0.5s;
+    }
+
+    & span.off {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+      width: 100%;
+      font-size: 10px;
+      transition: all ease-in-out 0.5s,
+        0.5s;
+    }
+  }
 
   @include mq(md) {
     display: none;
   }
+
+  &.closeBtn {
+    position: absolute;
+    z-index: 500;
+    top: 14px;
+    right: 8px;
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    cursor: pointer;
+
+    &__inner {
+      position: relative;
+    }
+
+    &__bar {
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      display: block;
+      position: absolute;
+
+
+      &:first-child {
+        top: 0;
+        transform: rotate(35deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 20px;
+        transform: rotate(-35deg);
+      }
+    }
+
+    &>div.c-text {
+      margin: 0;
+      text-align: center;
+      position: relative;
+      color: #fff5e4;
+      font-size: 0.7rem;
+      margin-top: 32px;
+
+      & span.on {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        width: 100%;
+        font-size: 10px;
+        transition: all ease-in-out 0.5s, 0.5s;
+      }
+
+      & span.off {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        font-size: 10px;
+        transition: all ease-in-out 0.5s,
+          0.5s;
+      }
+    }
+
+    @include mq(md) {
+      display: none;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+// .c-text {
+//   margin: 0;
+//   text-align: center;
+//   position: relative;
+//   color: #fff5e4;
+//   font-size: 0.7rem;
+//   margin-top: 32px;
+
+//   & span.on {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     display: block;
+//     width: 100%;
+//     font-size: 10px;
+//     transition: all ease-in-out 0.5s, 0.5s;
+//   }
+
+//   & span.off {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     display: none;
+//     width: 100%;
+//     font-size: 10px;
+//     transition: all ease-in-out 0.5s,
+//       0.5s;
+//   }
+
+
+//   @include mq(md) {
+//     display: none;
+//   }
+// }
 
 .c-btn__close {
   display: none;
@@ -214,26 +394,28 @@ __________________________________________*/
 
 .p-navigation {
   display: block;
-  margin-top: 80px;
+  // margin-top: 80px;
 
   @include mq(md) {
-    width: 80%;
+    width: 98%;
     margin: 0 auto;
   }
 
   & ul {
     display: block;
+    margin-top: 72px;
 
     @include mq(md) {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      margin-top: 0;
     }
 
     & li {
       position: relative;
       list-style-type: none;
-      flex-grow: 1.2;
-      flex-shrink: 1;
+      flex-grow: 1;
+      flex-shrink: 2;
       flex-basis: 0%;
       align-self: center;
 
@@ -260,13 +442,18 @@ __________________________________________*/
       //モバイルタイミングのみ縦積みのメニューに変化
       &:not(.logo) {
         opacity: 0;
-        transition: all ease-in-out 0.3s 0.3s;
+        transition: all ease-in-out 0.5s, 0.5s;
+
+
 
         @include mq(md) {
           opacity: 1;
           transition: ease;
+          flex-grow: 1;
+          flex-shrink: 4;
         }
       }
+
 
       &.logo {
         position: absolute;
@@ -282,7 +469,18 @@ __________________________________________*/
           left: auto;
           margin: auto;
           transform: none;
+          flex-grow: 2;
+          flex-shrink: 1
+        }
 
+        @include mq(lg) {
+          position: static;
+          top: auto;
+          left: auto;
+          margin: auto;
+          transform: none;
+          flex-grow: 1;
+          flex-shrink: 1
         }
       }
 
@@ -312,6 +510,19 @@ __________________________________________*/
         font-size: 0.1rem;
         overflow: hidden;
       }
+    }
+
+
+  }
+
+  &.open>ul>li:not(.logo) {
+    opacity: 1;
+    border-bottom: 1px dashed #fff;
+    width: 90%;
+    margin: 0 auto;
+
+    &>a {
+      line-height: 48px;
     }
   }
 }
@@ -344,9 +555,19 @@ __________________________________________*/
     width: 100%;
     z-index: 1;
     overflow: hidden;
-    padding-top: 56.25%;
+    padding-top: 177.866%;
     // position: absolute;
     top: 432px;
+
+    @include mq(md) {
+      @include bg-gradient;
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 133.333%;
+      // position: absolute;
+      top: 710px;
+    }
 
     @include mq(lg) {
       @include bg-gradient;
@@ -377,9 +598,19 @@ __________________________________________*/
     width: 100%;
     z-index: 1;
     overflow: hidden;
-    padding-top: 56.25%;
+    padding-top: 177.866%;
     // position: absolute;
     top: 1296px;
+
+    @include mq(md) {
+      @include bg-gradient(45deg, rgba(160, 236, 208, 0.8), 30%);
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 133.333%;
+      // position: absolute;
+      top: 2130px;
+    }
 
 
     @include mq(lg) {
@@ -410,10 +641,23 @@ __________________________________________*/
     width: 100%;
     z-index: 1;
     overflow: hidden;
-    padding-top: 56.25%;
+    padding-top: 177.866%;
     // position: absolute;
     background-size: cover;
+    object-fit: cover;
     top: 864px;
+
+    @include mq(md) {
+      background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
+      background-blend-mode: screen;
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+      padding-top: 133.333%;
+      // position: absolute;
+      background-size: cover;
+      top: 1420px;
+    }
 
     @include mq(lg) {
       background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
@@ -489,14 +733,24 @@ __________________________________________*/
   // position: absolute;
   //#background_videoと#video_coverのpositionをfixedに変更
   width: 100%;
-
+  // <--ここから 代替画像を表示したい場合コメントアウト削除--
+  // height: 100%;
+  // z-index: -100;
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  // bottom: 0;
+  // --ここから 代替画像を表示したい場合コメントアウト削除-->
   background: url('../images/dog-australia-l.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 #overlay {
-  position: absolute;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
   top: 0;
   right: 0;
   left: 0;

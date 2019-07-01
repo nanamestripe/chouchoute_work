@@ -73,10 +73,19 @@ __________________________________________*/
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center bottom;
+  -webkit-transition: all ease-in-out 0.5s, 0.5s;
+  transition: all ease-in-out 0.5s, 0.5s;
 }
 
 .l-header.open {
+  width: 100%;
   height: 100%;
+  /* background-image: url(../images/); */
+  background-image: url(../images/header_background-curve-sm.svg);
+  z-index: 100;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-position: center top;
 }
 
@@ -177,17 +186,154 @@ __________________________________________*/
 .c-hamburger {
   position: absolute;
   z-index: 500;
-  top: 0;
-  right: 0;
+  top: 14px;
+  right: 8px;
   width: 56px;
   height: 56px;
   padding: 8px;
   cursor: pointer;
-  background: chocolate;
+}
+
+.c-hamburger__inner {
+  position: relative;
+}
+
+.c-hamburger__bar {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  -webkit-transition: all ease-in-out 0.5s 0.5s;
+  transition: all ease-in-out 0.5s 0.5s;
+}
+
+.c-hamburger__bar:first-child {
+  left: 0;
+  top: 0px;
+}
+
+.c-hamburger__bar:nth-child(2) {
+  left: 0;
+  top: 10px;
+}
+
+.c-hamburger__bar:nth-child(3) {
+  left: 0;
+  top: 20px;
+}
+
+.c-hamburger > div.c-text {
+  margin: 0;
+  text-align: center;
+  position: relative;
+  color: #fff5e4;
+  font-size: 0.7rem;
+  margin-top: 32px;
+}
+
+.c-hamburger > div.c-text span.on {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  font-size: 10px;
+  -webkit-transition: all ease-in-out 0.5s, 0.5s;
+  transition: all ease-in-out 0.5s, 0.5s;
+}
+
+.c-hamburger > div.c-text span.off {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  font-size: 10px;
+  -webkit-transition: all ease-in-out 0.5s, 0.5s;
+  transition: all ease-in-out 0.5s, 0.5s;
 }
 
 @media screen and (min-width: 768px) {
   .c-hamburger {
+    display: none;
+  }
+}
+
+.c-hamburger.closeBtn {
+  position: absolute;
+  z-index: 500;
+  top: 14px;
+  right: 8px;
+  width: 56px;
+  height: 56px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.c-hamburger.closeBtn__inner {
+  position: relative;
+}
+
+.c-hamburger.closeBtn__bar {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+}
+
+.c-hamburger.closeBtn__bar:first-child {
+  top: 0;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.c-hamburger.closeBtn__bar:nth-child(2) {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.c-hamburger.closeBtn__bar:nth-child(3) {
+  top: 20px;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+.c-hamburger.closeBtn > div.c-text {
+  margin: 0;
+  text-align: center;
+  position: relative;
+  color: #fff5e4;
+  font-size: 0.7rem;
+  margin-top: 32px;
+}
+
+.c-hamburger.closeBtn > div.c-text span.on {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  font-size: 10px;
+  -webkit-transition: all ease-in-out 0.5s, 0.5s;
+  transition: all ease-in-out 0.5s, 0.5s;
+}
+
+.c-hamburger.closeBtn > div.c-text span.off {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  font-size: 10px;
+  -webkit-transition: all ease-in-out 0.5s, 0.5s;
+  transition: all ease-in-out 0.5s, 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .c-hamburger.closeBtn {
     display: none;
   }
 }
@@ -201,18 +347,18 @@ project
 __________________________________________*/
 .p-navigation {
   display: block;
-  margin-top: 80px;
 }
 
 @media screen and (min-width: 768px) {
   .p-navigation {
-    width: 80%;
+    width: 98%;
     margin: 0 auto;
   }
 }
 
 .p-navigation ul {
   display: block;
+  margin-top: 72px;
 }
 
 @media screen and (min-width: 768px) {
@@ -220,20 +366,21 @@ __________________________________________*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 0;
   }
 }
 
 .p-navigation ul li {
   position: relative;
   list-style-type: none;
-  -webkit-box-flex: 1.2;
-  -ms-flex-positive: 1.2;
-  flex-grow: 1.2;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 2;
+  flex-shrink: 2;
   -ms-flex-preferred-size: 0%;
   flex-basis: 0%;
   -ms-flex-item-align: center;
@@ -262,8 +409,8 @@ __________________________________________*/
 
 .p-navigation ul li:not(.logo) {
   opacity: 0;
-  -webkit-transition: all ease-in-out 0.3s 0.3s;
-  transition: all ease-in-out 0.3s 0.3s;
+  -webkit-transition: all ease-in-out 0.5s, 0.5s;
+  transition: all ease-in-out 0.5s, 0.5s;
 }
 
 @media screen and (min-width: 768px) {
@@ -271,6 +418,11 @@ __________________________________________*/
     opacity: 1;
     -webkit-transition: ease;
     transition: ease;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 4;
+    flex-shrink: 4;
   }
 }
 
@@ -292,6 +444,27 @@ __________________________________________*/
     margin: auto;
     -webkit-transform: none;
     transform: none;
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .p-navigation ul li.logo {
+    position: static;
+    top: auto;
+    left: auto;
+    margin: auto;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
   }
 }
 
@@ -322,6 +495,17 @@ __________________________________________*/
   text-indent: -200%;
   font-size: 0.1rem;
   overflow: hidden;
+}
+
+.p-navigation.open > ul > li:not(.logo) {
+  opacity: 1;
+  border-bottom: 1px dashed #fff;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.p-navigation.open > ul > li:not(.logo) > a {
+  line-height: 48px;
 }
 
 .p-content {
@@ -360,8 +544,21 @@ __________________________________________*/
   width: 100%;
   z-index: 1;
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 177.866%;
   top: 432px;
+}
+
+@media screen and (min-width: 768px) {
+  .p-content__colored--01 {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 229, 214, 0.8)), to(rgba(214, 229, 216, 0.8))) fixed;
+    background: -webkit-linear-gradient(top, rgba(217, 229, 214, 0.8), rgba(214, 229, 216, 0.8)) fixed;
+    background: linear-gradient(180deg, rgba(217, 229, 214, 0.8), rgba(214, 229, 216, 0.8)) fixed;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 133.333%;
+    top: 710px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -396,8 +593,20 @@ __________________________________________*/
   width: 100%;
   z-index: 1;
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 177.866%;
   top: 1296px;
+}
+
+@media screen and (min-width: 768px) {
+  .p-content__colored--02 {
+    background: -webkit-linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
+    background: linear-gradient(45deg, rgba(160, 236, 208, 0.8), rgba(160, 226, 236, 0.8)) fixed;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 133.333%;
+    top: 2130px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -430,9 +639,24 @@ __________________________________________*/
   width: 100%;
   z-index: 1;
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 177.866%;
   background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
   top: 864px;
+}
+
+@media screen and (min-width: 768px) {
+  .p-content__bgImage {
+    background: #75DBCD url(../images/dog-coast-l.jpg) no-repeat;
+    background-blend-mode: screen;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 133.333%;
+    background-size: cover;
+    top: 1420px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -512,7 +736,10 @@ __________________________________________*/
 }
 
 #overlay {
-  position: absolute;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
   top: 0;
   right: 0;
   left: 0;
